@@ -44,19 +44,17 @@ function deletepost(){
         
     })
 }
-createpost({title:"fkjdwkehbj",body:"fjwnef"})
-.then(()=>{
-    getpost();
-    deletepost().then(()=>{
-        getpost();
-        deletepost().then(()=>{
-            getpost();
-            deletepost().then(()=>{
-                getpost();
-                deletepost().then(()=>{
-                    getpost();
-                })
-            })
-        })
-    })
-});
+function lastactivity(){
+
+   
+}
+createpost({title:"fkjdwkehbj",body:"fjwnef"});
+createpost({title:"post three",body:"this is third post"});
+promise1=new Promise((resolve, reject) => {
+    var l=posts.length-1;
+    resolve(posts[1].createdat);
+})
+promis2=Promise.resolve("10");
+promise3=Promise.resolve("hello world");
+Promise.all([promis1,promis2,promise3]).then(values=>console.log(values));
+    
